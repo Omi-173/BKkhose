@@ -128,58 +128,79 @@
 
 <!-- Carousel Start -->
 <div class="container-fluid px-0 mb-0">
-    <div id="header-carousel" class="carousel slide position-relative" data-bs-ride="carousel">
-      <div class="carousel-inner">
-  
-       <!-- Slide 1 - Video Background -->
-<div class="carousel-item active">
-    <video class="w-100" autoplay muted loop playsinline style="height: 85vh; object-fit: cover;">
-      <source src="vdo/bkbgvdo.mp4" type="video/mp4">
-      Your browser does not support the video tag.
-    </video>
-    <div class="carousel-caption d-flex flex-column justify-content-center align-items-center text-center h-100" style="top: 0; bottom: 0;">
-      <div class="container">
-        <div class="row justify-content-center">
-          <div class="col-lg-10">
-            <p class="fs-6 fw-bold text-uppercase animated slideInRight mb-2" style="color: #f58634;">
-              37+ Years of Working Experience
-            </p>
-            <h1 class="display-5 fw-bold text-white animated slideInRight mb-3">
-              Building Today, Empowering Tomorrow.
-            </h1>
-            <a href="#" class="btn btn-primary px-4 py-2 animated slideInRight"
-               style="border-radius: 25px; background-color: #f58634; border: none;">
-              Explore More
-            </a>
+  <div id="header-carousel" class="carousel slide position-relative" data-bs-ride="carousel">
+    <div class="carousel-inner">
+
+      <!-- Slide 1 - Video Background (Mobile + Desktop) -->
+      <div class="carousel-item active">
+        <video class="w-100 video-slide" autoplay muted loop playsinline>
+          <source src="vdo/bkbgvdo.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+
+        <div class="carousel-caption d-flex flex-column justify-content-center align-items-center text-center h-100" style="top: 0; bottom: 0;">
+          <div class="container">
+            <div class="row justify-content-center">
+              <div class="col-lg-10">
+                <p class="fs-6 fw-bold text-uppercase animated slideInRight mb-2" style="color: #f58634;">
+                  37+ Years of Working Experience
+                </p>
+                <h1 class="display-5 fw-bold text-white animated slideInRight mb-3">
+                  Building Today, Empowering Tomorrow.
+                </h1>
+                <a href="#" class="btn btn-primary px-4 py-2 animated slideInRight"
+                   style="border-radius: 25px; background-color: #f58634; border: none;">
+                  Explore More
+                </a>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </div>
-  
-  
+
       <!-- Slide 2 - Image Background -->
-<div class="carousel-item">
-    <img src="img/bkbgimg.jpg" class="w-100" alt="Slide Image" style="height: 85vh; object-fit: cover;">
-    <div class="carousel-caption d-flex flex-column justify-content-center align-items-center text-center h-100" style="top: 0; bottom: 0;">
-      <div class="container">
-        <div class="row justify-content-center">
-          <div class="col-lg-10">
-            <p class="fs-6 fw-bold text-uppercase animated slideInRight mb-2" style="color: #f58634;">
-              37+ Years of Working Experience
-            </p>
-            <h1 class="display-5 fw-bold text-white animated slideInRight mb-3">
-              Building a better Infrastructure for a better India
-            </h1>
-            <a href="#" class="btn btn-primary px-4 py-2 animated slideInRight"
-               style="border-radius: 25px; background-color: #f58634; border: none;">
-              Explore More
-            </a>
+      <div class="carousel-item">
+        <img src="img/bkbgimg.jpg" class="w-100" alt="Slide Image" style="height: 85vh; object-fit: cover;">
+        <div class="carousel-caption d-flex flex-column justify-content-center align-items-center text-center h-100" style="top: 0; bottom: 0;">
+          <div class="container">
+            <div class="row justify-content-center">
+              <div class="col-lg-10">
+                <p class="fs-6 fw-bold text-uppercase animated slideInRight mb-2" style="color: #f58634;">
+                  37+ Years of Working Experience
+                </p>
+                <h1 class="display-5 fw-bold text-white animated slideInRight mb-3">
+                  Building a better Infrastructure for a better India
+                </h1>
+                <a href="#" class="btn btn-primary px-4 py-2 animated slideInRight"
+                   style="border-radius: 25px; background-color: #f58634; border: none;">
+                  Explore More
+                </a>
+              </div>
+            </div>
           </div>
         </div>
       </div>
+
     </div>
   </div>
+</div>
+<!-- Carousel End -->
+
+<!-- Responsive CSS -->
+<style>
+  .video-slide {
+    height: 85vh;
+    object-fit: cover;
+  }
+
+  @media (max-width: 768px) {
+    .video-slide {
+      height: 60vh;
+    }
+  }
+</style>
+
+
   
   
       <!-- Carousel Controls -->
