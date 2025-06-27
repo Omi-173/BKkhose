@@ -32,16 +32,35 @@
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
     
-
-
+    <!-- Enhanced Spinner CSS -->
+    <style>
+      .loading-overlay {
+        background: rgba(255,255,255,0.85);
+        transition: opacity 0.2s;
+        z-index: 1050;
+      }
+      #spinner.show {
+        opacity: 1;
+        pointer-events: all;
+      }
+      #spinner {
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.2s;
+      }
+    </style>
 
 </head>
 
 <body>
     <!-- Spinner Start -->
     <div id="spinner"
-        class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
-        <div class="spinner-border text-primary" role="status" style="width: 3rem; height: 3rem;"></div>
+        class="show loading-overlay position-fixed w-100 vh-100 top-0 start-0 d-flex flex-column align-items-center justify-content-center"
+        style="z-index: 1050;">
+        <div class="spinner-border text-primary" role="status" style="width: 4rem; height: 4rem; box-shadow: 0 0 30px #f58634;"></div>
+        <div style="margin-top: 1rem; color: #f58634; font-weight: bold; font-size: 1.2rem; letter-spacing: 2px;">
+            Loading...
+        </div>
     </div>
     <!-- Spinner End -->
 
@@ -857,6 +876,15 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+    <script>
+      // Hide spinner after 0.2s on initial load
+      window.addEventListener('DOMContentLoaded', function () {
+        setTimeout(function () {
+          var spinner = document.getElementById('spinner');
+          if (spinner) spinner.classList.remove('show');
+        }, 200);
+      });
+    </script>
 </body>
 
 </html>
